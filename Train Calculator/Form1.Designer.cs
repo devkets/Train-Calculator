@@ -51,16 +51,17 @@
             // 
             // numberOne
             // 
+            this.numberOne.AccessibleRole = System.Windows.Forms.AccessibleRole.Text;
             this.numberOne.Location = new System.Drawing.Point(12, 12);
             this.numberOne.Name = "numberOne";
-            this.numberOne.Size = new System.Drawing.Size(187, 23);
+            this.numberOne.Size = new System.Drawing.Size(132, 23);
             this.numberOne.TabIndex = 1;
             this.numberOne.TextChanged += new System.EventHandler(this.numberOne_TextChanged);
             this.numberOne.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numberOne_KeyDown);
             // 
             // equals
             // 
-            this.equals.Location = new System.Drawing.Point(159, 41);
+            this.equals.Location = new System.Drawing.Point(104, 41);
             this.equals.Name = "equals";
             this.equals.Size = new System.Drawing.Size(40, 86);
             this.equals.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             // subtraction
             // 
-            this.subtraction.Location = new System.Drawing.Point(85, 41);
+            this.subtraction.Location = new System.Drawing.Point(58, 41);
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(40, 40);
             this.subtraction.TabIndex = 4;
@@ -100,7 +101,7 @@
             // 
             // multiplication
             // 
-            this.multiplication.Location = new System.Drawing.Point(85, 87);
+            this.multiplication.Location = new System.Drawing.Point(58, 87);
             this.multiplication.Name = "multiplication";
             this.multiplication.Size = new System.Drawing.Size(40, 40);
             this.multiplication.TabIndex = 6;
@@ -111,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(228, 12);
+            this.label1.Location = new System.Drawing.Point(185, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 15);
             this.label1.TabIndex = 7;
@@ -119,7 +120,7 @@
             // 
             // results
             // 
-            this.results.Location = new System.Drawing.Point(228, 41);
+            this.results.Location = new System.Drawing.Point(156, 41);
             this.results.Multiline = true;
             this.results.Name = "results";
             this.results.ReadOnly = true;
@@ -130,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 308);
+            this.ClientSize = new System.Drawing.Size(268, 304);
             this.Controls.Add(this.results);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.multiplication);

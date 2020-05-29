@@ -17,6 +17,7 @@ namespace Train_Calculator
         int temp2 = 0;
         int op = 0;
         int result = 0;
+        bool resultFlag = false;
         public Form1()
         {
             InitializeComponent();
@@ -104,6 +105,7 @@ namespace Train_Calculator
             result = 0;
             results.Text = null;
             numberOne.Focus();
+            resultFlag = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -135,9 +137,12 @@ namespace Train_Calculator
                                 if (temp2 > 0)
                                 {
                                     result = (temp1 / temp2);
+                                    temp1 = result;
+                                    setResults();
+                                } else
+                                {
+                                    MessageBox.Show("Cannot Divide by zero.");
                                 }
-                                temp1 = result;
-                                setResults();
                                 break;
                             case 4:
                                 result = (temp1 * temp2);
@@ -148,12 +153,13 @@ namespace Train_Calculator
                                 break;
                         }
                         numberOne.Select(numberOne.Text.Length, 0);
+                        resultFlag = true;
                     }
                     break;
                 case Keys.Add:
                     if (numberOne != null)
                     {
-                        temp1 = Int32.Parse(numberOne.Text);
+                        if(!resultFlag) { temp1 = Int32.Parse(numberOne.Text); }
                         op = 1;
                         numberOne.Text = null;
                         numberOne.Focus();
@@ -162,7 +168,7 @@ namespace Train_Calculator
                 case Keys.Subtract:
                     if (numberOne != null)
                     {
-                        temp1 = Int32.Parse(numberOne.Text);
+                        if (!resultFlag) { temp1 = Int32.Parse(numberOne.Text); }
                         op = 2;
                         numberOne.Text = null;
                         numberOne.Focus();
@@ -171,7 +177,7 @@ namespace Train_Calculator
                 case Keys.Divide:
                     if (numberOne != null)
                     {
-                        temp1 = Int32.Parse(numberOne.Text);
+                        if (!resultFlag) { temp1 = Int32.Parse(numberOne.Text); }
                         op = 3;
                         numberOne.Text = null;
                         numberOne.Focus();
@@ -180,7 +186,7 @@ namespace Train_Calculator
                 case Keys.Multiply:
                     if (numberOne != null)
                     {
-                        temp1 = Int32.Parse(numberOne.Text);
+                        if (!resultFlag) { temp1 = Int32.Parse(numberOne.Text); }
                         op = 4;
                         numberOne.Text = null;
                         numberOne.Focus();
